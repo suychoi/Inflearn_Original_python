@@ -1,5 +1,10 @@
-# VSC 출력은 Ctrl + Shift + B
+#String 에서는 S를 생략해도 된다. 
+
+# VSC 출력은 Ctrl + f5
+#''' 따옴표3개도 가능합니다. 
 print('''이게뭔데''')
+
+# sep option
 print('python', 'google.com', sep='@')
 
 # End option(개행을 하지 않고 이어쓰기)
