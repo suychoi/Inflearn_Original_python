@@ -7,15 +7,15 @@ print('''이게뭔데''')
 # sep option
 print('python', 'google.com', sep='@')
 
-# End option(개행을 하지 않고 이어쓰기)
+# End option(개행을 하지 않고 이어쓰기) Welcome to IT News Web Site
 print('Welcome to', end=' ')
 print('IT News', end=' ')
 print('Web Site')
 
 # file option
+# 외부 파일에 출력내용을 저장한다. 
 import sys
 print('Learn Python', file=sys.stdout) 
-# 외부 파일에 출력내용을 저장한다. 
 
 #Format (d, s, f) 정수, 문자열, 실수
 print('%s %s' % ('one', 'two'))
@@ -30,12 +30,11 @@ print('{:>10}'.format('nice'))  #("      nice")
 print('%-10s' % ('nice'))       #("nice     ")
 print('{:10}'.format('nice'))   #("nice     ")
 
-
 print('{:_>10}'.format('nice'))   #("______nice")
 print('{:^10}'.format('nice'))   #("   nice    ")
 
-#문자열의 크기가 더 큰 경우 . 
-# 기호가 있어야 잘린 상태로 출력된다. 
+#문자열의 크기가 더 큰 경우
+# 마침표 기호가 있어야 잘린 상태로 출력된다. 
 print('%.5s' % ('pythonstudy')) #("pytho")
 #10공간 중에서 5공간만 출력
 print('{:10.5}'.format('pythonstudy'))  #('pytho     ')
