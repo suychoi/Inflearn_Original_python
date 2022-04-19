@@ -43,4 +43,5 @@ print(pow(5, 3))
 #외부 모듈
 import math
 print(math.pi)
+print(math.ceil(3.7))   #올림
 
