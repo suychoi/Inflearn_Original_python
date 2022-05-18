@@ -4,7 +4,7 @@
 #''' 따옴표3개도 가능합니다. 
 print('''이게뭔데''')
 
-# sep option
+# sep option 문자열 사이를 @로 나눈다.
 print('python', 'google.com', sep='@')
 
 # End option(개행을 하지 않고 이어쓰기) Welcome to IT News Web Site
