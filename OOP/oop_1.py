@@ -45,7 +45,12 @@ print(a.species)
 print(c.species)
 
 # 예제2
-
+# self의 이해, 인스턴스의 속성..
+class SelfTest:
+    def func1():
+        print('func1 called')
+    def func2(self):
+        print('func2 called')
 
 
 
