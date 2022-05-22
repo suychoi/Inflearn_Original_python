@@ -27,3 +27,13 @@ if a.sepcies == 'dog':
 # 클래스 변수 직접 접근하기
 print(Dog.sepcies)
 print(a.sepcies)
+
+#class 선언 연습
+class God:  #object 생략 가능
+    #클래스 속성 self를 포함하면 인스턴스 속성이다
+    def func1():
+        print('func1')
+    def func2(self):
+        print('func2')
+
+
