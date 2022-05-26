@@ -47,3 +47,38 @@ def conv_abs(x):
 print(list(map(conv_abs, [1, 2, -1, -3, -5, -6, -7, -23])))
 print(list(map(lambda x: abs(x), [1, 2, -1, -3, -5, -6, -7, -23])))
 # map은 함수를 통과시켜서 나오는 값..!
+
+# pow 함수 : 제곱값 반환
+print(pow(2,10))    #1024
+
+# range 함수 반복 가능한 객체(Iterable) 반환
+print(list((range(1, 9, 2))))
+
+# round : 반올림 함수
+print(round(6.5139, 2)) # 둘째자리에서 반올림
+print(round(5.6))   # 첫재짜리에서 반올림 됨
+
+# sorted : 반복 가능한 객체(Iterable)를 정렬 후 반환,
+print(sorted([6, 7, 4, 2, 46, 83]))     # 오름차순
+
+print(sorted(['p', 'y', 't', 'h', 'o', 'n']))
+
+# sum : 반복 가능한 객체(Iterable)의 합을 반환
+print(sum((6, 7, 8, 9, 10)))
+
+# type : 자료형 반환
+print(type('sel'))
+print(type({}))
+print(type(()))
+
+# zip : 반복 가능한(Iterable) 객체의 요소를 묶어서 반환
+print(list(zip([10,20,30],[40,50,60],[70,80,90])))
+#[(10, 40, 70), (20, 50, 80), (30, 60, 90)]
+print(list(zip([10,20,30],[40,50,60],[70,80])))
+#[(10, 40, 70), (20, 50, 80)]       짝이 없는 경우는 묶이지 않는다.
+
+# inemulate, filter, map 은 꼭 알아야 합니다.
+
+
+
+
