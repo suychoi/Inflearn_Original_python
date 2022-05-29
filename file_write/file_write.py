@@ -63,5 +63,27 @@ with open('../resource/it_news.txt', 'r', encoding='UTF-8') as f:
     for i in cont:
         print(i, end=' ')
 
+# 새로운 파일 작성
+with open('../resource/contents2.txt', 'w') as f:
+    f.write('I love python\n')
+
+with open('../resource/contents2.txt', 'w') as f:   # 덮어써진다.
+    f.write('I love python 3\n')
+
+with open('../resource/contents2.txt', 'a') as f:   # 이어쓰기 된다. append
+    f.write('I love python appended\n')
+
+# list -> file로 쓰기
+with open('../resource/contents1.txt', 'w') as f:
+    list = ['Apple\n', 'Grape\n', "Orange\n", 'Banana\n']
+    f.writelines(list)
+
+with open('../resource/contents3.txt', 'w') as f:
+    print('I\'ll printed on file', file=f)
+    print('I\'ll printed on file', file=f)
+    print('I\'ll printed on file', file=f)  # print가 file에 적힌다.
+
+# readlines, writelines 가장 중요합니다.
+
 
 
