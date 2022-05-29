@@ -8,8 +8,8 @@
 # 상대 경로 ( '../ , ./ '), 절대경로 (' C:\Django\example..' )
 
 # 파일 읽기(Read)
-# f = open('C:\Users\jack9\PycharmProjects\Inflearn_Original_python\resource\it_news.txt')    # 파일을 연결
-f = open('../resource/it_news.txt', 'r', encoding='UTF-8')  # t 는 default 라서 skip 해도 됨.
+# f = open('C:\Users\jack9\PycharmProjects\Inflearn_Original_python\00_resource\it_news.txt')    # 파일을 연결
+f = open('../00_resource/it_news.txt', 'r', encoding='UTF-8')  # t 는 default 라서 skip 해도 됨.
 
 # 속성 확인
 print(dir(f))
@@ -28,7 +28,7 @@ contents = f.read()
 f.close()
 print()
 # 보통은 f 로 open 해서 사용하기보다 with 문을 쓴다.
-with open('../resource/it_news.txt', 'r', encoding='UTF-8') as f:
+with open('../00_resource/it_news.txt', 'r', encoding='UTF-8') as f:
     c = f.read()
     print(c)
     print(list(c))
@@ -37,7 +37,7 @@ with open('../resource/it_news.txt', 'r', encoding='UTF-8') as f:
 print()
 
 # read() : 전체 읽기, read(10) : 10Byte int형에 맞는 byte 수만큼만 읽어옴
-with open('../resource/it_news.txt', 'r', encoding='UTF-8') as f:
+with open('../00_resource/it_news.txt', 'r', encoding='UTF-8') as f:
     c = f.read(20)      # 20 Byte 만 받아옵니다.
     print(c)
     c = f.read(20)      # 20 Byte 이후인 부분에 커서가 기억하고 있고, 커서부터 20byte 만큼 읽어옵니다.
@@ -48,7 +48,7 @@ with open('../resource/it_news.txt', 'r', encoding='UTF-8') as f:
 print()
 
 # readline \n 을 인식해서 한 줄씩 읽어옵니다.
-with open('../resource/it_news.txt', 'r', encoding='UTF-8') as f:
+with open('../00_resource/it_news.txt', 'r', encoding='UTF-8') as f:
     line = f.readline()     # 한줄 출력
     print(line)
     line = f.readline()     # 다음줄 출력
@@ -56,7 +56,7 @@ with open('../resource/it_news.txt', 'r', encoding='UTF-8') as f:
 print()
 
 # readlines : 전체를 읽은 후 라인 단위 리스트로 저장
-with open('../resource/it_news.txt', 'r', encoding='UTF-8') as f:
+with open('../00_resource/it_news.txt', 'r', encoding='UTF-8') as f:
     cont = f.readlines()
     # print(cont)
     # print(cont[1])
@@ -64,21 +64,21 @@ with open('../resource/it_news.txt', 'r', encoding='UTF-8') as f:
         print(i, end=' ')
 
 # 새로운 파일 작성
-with open('../resource/contents2.txt', 'w') as f:
+with open('../00_resource/contents2.txt', 'w') as f:
     f.write('I love python\n')
 
-with open('../resource/contents2.txt', 'w') as f:   # 덮어써진다.
+with open('../00_resource/contents2.txt', 'w') as f:   # 덮어써진다.
     f.write('I love python 3\n')
 
-with open('../resource/contents2.txt', 'a') as f:   # 이어쓰기 된다. append
+with open('../00_resource/contents2.txt', 'a') as f:   # 이어쓰기 된다. append
     f.write('I love python appended\n')
 
 # list -> file로 쓰기
-with open('../resource/contents1.txt', 'w') as f:
+with open('../00_resource/contents1.txt', 'w') as f:
     list = ['Apple\n', 'Grape\n', "Orange\n", 'Banana\n']
     f.writelines(list)
 
-with open('../resource/contents3.txt', 'w') as f:
+with open('../00_resource/contents3.txt', 'w') as f:
     print('I\'ll printed on file', file=f)
     print('I\'ll printed on file', file=f)
     print('I\'ll printed on file', file=f)  # print가 file에 적힌다.

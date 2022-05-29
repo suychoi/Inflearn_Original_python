@@ -6,7 +6,7 @@
 
 import csv
 # 원래는 (,) 로 구분하는게 정석이다.
-with open("../resource/test.csv", 'r') as f:
+with open("../00_resource/test.csv", 'r') as f:
     reader = csv.reader(f)
     next(reader)    # Header Skip 커서를 한줄 내림
     #객체 확인
@@ -19,14 +19,14 @@ with open("../resource/test.csv", 'r') as f:
         # print(c)  # 리스트로 받아온다.
         # print('|'.join(c))
 
-with open('../resource/test2.csv', 'r') as f:
+with open('../00_resource/test2.csv', 'r') as f:
     reader = csv.reader(f, delimiter='|')      # 구분자 !!
     # for c in reader:
         # print(','.join(c))
         # print(c)
 
 # 딕셔너리로 만들기
-with open('../resource/test.csv', 'r') as f:
+with open('../00_resource/test.csv', 'r') as f:
     reader = csv.DictReader(f)
     # 객체 확인
     print(reader)
@@ -39,7 +39,7 @@ with open('../resource/test.csv', 'r') as f:
         print("--------------------")       # DICT 형태로 csv 파일을 가져오면 이렇게 사용 가능!
 
 w = [[1,2,3], [4,5,6], [7,8,9], [10,11,12], [13,14,15], [16,17,18], [19,20,21]]
-with open('../resource/write1.csv', 'w', encoding='UTF-8') as f:
+with open('../00_resource/write1.csv', 'w', encoding='UTF-8') as f:
     print(dir(csv))
     wt = csv.writer(f)
     print(dir(wt))
@@ -49,7 +49,7 @@ with open('../resource/write1.csv', 'w', encoding='UTF-8') as f:
     for v in w:     # 의 내용을 하나씩 wt에 쓰는것
         wt.writerow(v)
 
-with open('../resource/write2.csv', 'w', encoding='UTF-8') as f:
+with open('../00_resource/write2.csv', 'w', encoding='UTF-8') as f:
     # 필드명
     fields = ['One', 'Two', 'Three']    # 헤더로 사용할것
     # Dict Writer
