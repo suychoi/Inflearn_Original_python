@@ -1,4 +1,4 @@
-# 흐름 제어문( if, for, while )
+# 흐름 제어문( 04_if, 05_for, while )
 # while 실습
 # while <expr>:
 #   <statement(s)>

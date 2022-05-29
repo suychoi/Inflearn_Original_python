@@ -1,7 +1,7 @@
 #파이썬 반복문
 #For 실습
 
-#for in <collection>        #list tuple dictionary 등 집합의 형태(다수의 데이터)
+#05_for in <collection>        #list tuple dictionary 등 집합의 형태(다수의 데이터)
 #   <Loop body>
 
 for v1 in range(10):
@@ -63,7 +63,7 @@ for v in lt:
         continue
     print("current type : ", v, type(v))
 
-# for - else 구문!!
+# 05_for - else 구문!!
 num = [1, 16, 100, 64, 23,73, 24, 43,78]
 for v in num:
     if v == 99:

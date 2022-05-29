@@ -5,7 +5,7 @@
 # 경우에 따라서는 절차지향이 더 빠른 퍼포먼스를 가질 수 있다.
 
 # 클래스 개념
-# OOP 란? 절차지향에 비해 장점,
+# 07_OOP 란? 절차지향에 비해 장점,
 # Self 개념
 # 인스턴스 메소드
 # 클래스, 인스턴스 변수
@@ -96,7 +96,7 @@ print(user1.__dict__)   #{'name': 'Lee'}
 print('>>', user1.stock_num)
 print(user2.__dict__)
 print('before', Warehouse.__dict__)   #__dict__ = 클래스 객체의 속성 정보를 확인하기 위해 사용하는 메서드
-# {'__module__': '__main__', 'stock_num': 2, '__init__': <function Warehouse.__init__ at 0x0000026112B19310>, '__del__': <function Warehouse.__del__ at 0x0000026112B193A0>, '__dict__': <attribute '__dict__' of 'Warehouse' objects>, '__weakref__': <attribute '__weakref__' of 'Warehouse' objects>, '__doc__': None}
+# {'__module__': '__main__', 'stock_num': 2, '__init__': <06_function Warehouse.__init__ at 0x0000026112B19310>, '__del__': <06_function Warehouse.__del__ at 0x0000026112B193A0>, '__dict__': <attribute '__dict__' of 'Warehouse' objects>, '__weakref__': <attribute '__weakref__' of 'Warehouse' objects>, '__doc__': None}
 
 del user1
 print('after', Warehouse.__dict__)

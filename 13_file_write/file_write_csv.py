@@ -15,13 +15,13 @@ with open("../00_resource/test.csv", 'r') as f:
     print(dir(reader)) #__iter__ 있음
     print()
 
-    # for c in reader:
+    # 05_for c in reader:
         # print(c)  # 리스트로 받아온다.
         # print('|'.join(c))
 
 with open('../00_resource/test2.csv', 'r') as f:
     reader = csv.reader(f, delimiter='|')      # 구분자 !!
-    # for c in reader:
+    # 05_for c in reader:
         # print(','.join(c))
         # print(c)
 
