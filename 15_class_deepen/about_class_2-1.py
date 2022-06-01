@@ -28,9 +28,9 @@ class Car():
 # Self 의미 : 인스턴스 메서드에서는 self가 첫번째 인자로 넘어오게 돼있다.
 
 
-car1 = Car('Ferrari', {'car_company' : 'Ferrari', 'car_detail' : {'color': 'White','horsepower': 400, 'price': 8000}})
-car2 = Car('BMW', {'car_company' : 'BMW', 'car_detail' : {'color': 'Black', 'horsepower': 200,'price': 3000}})
-car3 = Car('Audi',{'car_company' : 'Audi', 'car_detail' : {'color': 'Yellow', 'horsepower': 300, 'price': 4500}})
+car1 = Car('Ferrari', {'color': 'White','horsepower': 400, 'price': 8000})
+car2 = Car('BMW', {'color': 'Black', 'horsepower': 200,'price': 3000})
+car3 = Car('Audi',{'color': 'Yellow', 'horsepower': 300, 'price': 4500})
 
 # ID 값 확인 다 다른것을 확인 -> 클래스는 하나지만, 인스턴스는 여러개다.
 print(id(car1))
