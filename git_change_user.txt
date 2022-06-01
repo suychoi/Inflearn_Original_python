@@ -3,3 +3,10 @@ git config user.email "jack96318@hanmail.net"
 git config --list
 git config --global user.email "jack96318@hanmail.net"
 git config --list
+
+
+git config --list
+git config user.email "suychoi@gmarket.com"
+git config --list
+git config --global user.email "suychoi@gmarket.com"
+git config --list
