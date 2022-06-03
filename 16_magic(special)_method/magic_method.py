@@ -29,11 +29,52 @@ print(n * 100, n.__mul__(100))
 
 print()
 
+# 예제1
+class Fruit():
+    def __init__(self, _name, _price):
+        self._name = _name
+        self._price = _price
 
+    def __str__(self):
+        return 'Fruit Class Info : {} {}'.format(self._name, self._price)
 
+    def __add__(self, x):
+        print('__add__')
+        return self._price + x._price
 
+    def __sub__(self, x):
+        print('__sub__')
+        return self._price - x._price
 
+    def __le__(self, x):
+        print('__le__')
+        if self._price <= x._price:
+            return True
+        else:
+            return False
 
+    def __ge__(self, x):
+        print('__ge__')
+        if self._price >= x._price:
+            return True
+        else:
+            return False
 
+# 인스턴스 생성
+s1 = Fruit('Orange', 7500)
+s2 = Fruit('Mango', 2500)
 
+# 일반적인 경우 계산은 이렇게 하지만
+print(s1._price + s2._price)
+# 매직 메소드를 만들어 놓은 경우
+print(s1 + s2)
+print(s1 - s2)
+print(s2 - s1)
+print(s1 <= s2)
+print(s1 >= s2)
+# print(s1 < s2)
+# print(s1 > s2)
+print(s1)
+print(s2)
 
+# 클래스로 구현되어있어서 유지보수에 용이,
