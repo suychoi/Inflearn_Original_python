@@ -16,7 +16,6 @@ chars = '!@#$%^&*()_+'
 code_list1 = []
 
 for s in chars:
-
     code_list1.append(ord(s))
 print(code_list1)
 
@@ -26,6 +25,7 @@ print(code_list2)
 
 # Comprehending list + map, filter
 # 자주 쓰는 방식
+code_list3 = [ord(s) for s in chars if ord(s) > 40]
 
 
 
