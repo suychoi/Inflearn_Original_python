@@ -17,18 +17,52 @@ code_list1 = []
 
 for s in chars:
     code_list1.append(ord(s))
-print(code_list1)
 
 # 지능형 리스트(Comprehending lists) 로 만드는 경우(더 빠른 속도)
 code_list2 = [ord(s) for s in chars]
-print(code_list2)
 
 # Comprehending list + map, filter
 # 자주 쓰는 방식
 code_list3 = [ord(s) for s in chars if ord(s) > 40]
+code_list4 = list(filter(lambda x : x > 40, map(ord, chars)))   # filter 필터 적용
 
+# 전체 출력
+print(code_list1)
+print(code_list2)
+print(code_list3)
+print(code_list4)
 
+# chr 로 문자로 복구 확인
+print([chr(s) for s in code_list1])
+print([chr(s) for s in code_list2])
+print([chr(s) for s in code_list3])
+print([chr(s) for s in code_list4])
 
+# Generator 생성 sequence result를 반환, 메모리 사용량을 적게 for 문을 돌릴수있다.
+import array
+# array = 플랫, 가변형(위에서 확인)
+print(dir(chars))   # __iter__ 의 존재 확인, 이게 있으면 연속적인 값으로 for문으로 돌릴수있다는 뜻
+
+tuple_g = (ord(s) for s in chars)
+print(tuple_g)      #<generator object <genexpr> at 0x000001728D730740>
+print(type(tuple_g))
+print(next(tuple_g)) # next로 다음 값을 반환하는데,
+print(next(tuple_g))
+
+array_g = array.array('I', (ord(s) for s in chars))
+print(array_g)
+print(type(array_g))
+print(array_g.tolist())     # Array 를 list로 변환
+print()
+
+# 제네레이터 예제
+print(('%s' % c + str(n) for c in ['A', 'B', 'C', 'D'] for n in range(1,21)))
+for s in ('%s' % c + str(n) for c in ['A', 'B', 'C', 'D'] for n in range(1,21)):
+    print(s)
+    # 하나 생성하고 하나 출력하고 해서 메모리를 아낌
+
+# list 깊은복사와 얕은 복사의 차이!!
+# 리스트 주의 사항
 
 
 
