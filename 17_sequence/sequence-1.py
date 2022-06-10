@@ -63,7 +63,26 @@ for s in ('%s' % c + str(n) for c in ['A', 'B', 'C', 'D'] for n in range(1,21)):
 
 # list 깊은복사와 얕은 복사의 차이!!
 # 리스트 주의 사항
+marks1 = [['~'] * 3 for _ in range(4)]  # 반복은 하지만 사용은 안하는 경우 _ 로 사용도 가능
+print(marks1)
 
+marks2 = [['~'] * 3] * 4
+print(marks2)
+
+# marks1 과 marks2 는 똑같이 생겼지만, 다음에서 차이가 난다.
+marks1[0][1] = 'X'
+marks2[0][1] = 'X'
+
+print()
+print(marks1)
+print(marks2)
+# [['~', 'X', '~'], ['~', '~', '~'], ['~', '~', '~'], ['~', '~', '~']]
+# [['~', 'X', '~'], ['~', 'X', '~'], ['~', 'X', '~'], ['~', 'X', '~']]
+# 1번은 id 값이 다른 것, 2번은 id값도 같이 복제가 되어 이렇게 되는것. ...
+
+# 증명
+print([id(i) for i in marks1])
+print([id(i) for i in marks2])  # 2번은 다 같은 id를 공유
 
 
 
