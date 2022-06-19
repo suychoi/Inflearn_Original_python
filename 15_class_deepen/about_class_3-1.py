@@ -1,7 +1,10 @@
-# Class Method
-# Instance Method
-# Static Method
-# 3가지 메소드 활용 실습
+'''
+클래스 기반 메소드 심화
+ - Class Method
+ - Instance Method
+ - Static Method
+ - 3가지 메소드 활용 실습
+'''
 
 class Car():
     """
