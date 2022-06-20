@@ -1,4 +1,9 @@
 """
+Special 메소드 설명
+ - 파이썬 핵심 구조 설명
+ - 매직 메소드 실습
+ - 클래스 매직 메소드 실습
+
 magic method = special method
 
 파이썬 핵심 구조 ->
@@ -28,6 +33,9 @@ print(n.__bool__() , bool(n))
 print(n * 100, n.__mul__(100))
 
 print()
+
+# 새로운 이름을 가진 메서드를 만들면 되는건데 기존에 내장된 메서드를 사용하는 이유가 뭐지?
+# + 같은 기호로 가볍게 계산하기 위해서..?
 
 # 예제1
 class Fruit():
@@ -66,8 +74,9 @@ s2 = Fruit('Mango', 2500)
 
 # 일반적인 경우 계산은 이렇게 하지만
 print(s1._price + s2._price)
+
 # 매직 메소드를 만들어 놓은 경우
-print(s1 + s2)
+print(s1 + s2)                      # + 를 할 때 내부적으로 매직메서드(__add__)가 호출됨.
 print(s1 - s2)
 print(s2 - s1)
 print(s1 <= s2)

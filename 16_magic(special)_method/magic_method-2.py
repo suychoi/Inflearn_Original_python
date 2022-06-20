@@ -1,5 +1,7 @@
 """
-magic method = special method
+Special 메소드 설명
+ - 매직 메소드 심화
+ - 클래스 매직 메소드 실습 코딩
 
 파이썬 핵심 구조 ->
     시퀀스(Sequence)
@@ -7,8 +9,6 @@ magic method = special method
     함수(Functions)
     클래스(Class)
 
-    Special Method : Class 안에 정의할 수 있는 특별한(built in) 메소드
-    Law Level에서 개발을 하는거는 차원이 다른 개발자가 되는것.
 """
 
 # 클래스 예제2

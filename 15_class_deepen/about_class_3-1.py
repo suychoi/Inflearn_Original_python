@@ -1,8 +1,8 @@
 '''
 클래스 기반 메소드 심화
- - Class Method
- - Instance Method
- - Static Method
+ - Class Method : cls를 인자로 받음
+ - Instance Method : self 를 인자로 받음
+ - Static Method : 인자를 받지않고 자유롭게 사용
  - 3가지 메소드 활용 실습
 '''
 
@@ -42,7 +42,7 @@ class Car():
         return 'After Car Price -> company : {}, price : {}'.format(self._company, self._details.get('price') * Car.price_per_raise)
 
     # class method
-    @classmethod                     #
+    @classmethod                     # Decorator!!!
     def raise_price(cls, per):       # class method는 cls를 인자로 받습니다. cls = Class
         if per <= 1:
             print("Please Enter 1 Or More")
@@ -69,7 +69,7 @@ car2.detail_info()
 print(car1._details.get('price'))
 print()
 # 이렇게 직접 인스턴스 변수에 접근하는거는 좋지 않아서 privite 로 막아놓죠?
-# 대신 메소드를 만들어서 필요로하는 정보만 반환을 하죠
+# 대신 메소드를 만들어서 필요로하는 정보만 반환을 하죠 -> get_price 메서드를 만들어서 접근
 
 # 메서드로 가격정보 접근( 인상 전 가격정보)
 print(car1.get_price())
@@ -79,10 +79,12 @@ print()
 # 인상 후 가격정보
 Car.price_per_raise = 1.4       # 클래스변수도  직접접근해서 변경하는건 좋지 않아요 -> 클래스 메서드를 만들어서 접근!
 # 메서드로 인상 후 가격 반환
+print('인상 후 가격정보')
 print(car1.get_price_culc())
-print(car2.get_price_culc())
+print(car2.get_price_culc(), '\n')
 
 # 클래스 메서드로 가격인상
+print('인상률 1인 경우')
 Car.raise_price(1)
 print()
 Car.raise_price(1.1)
@@ -90,9 +92,11 @@ print(car1.get_price_culc())
 print(car2.get_price_culc())
 
 # 스태틱 메서드 확인
+print('\n', 'Static method check')
 print(car1.is_bmw(car1))
 print(car2.is_bmw(car2))
 print(Car.is_bmw(car1)) # 클래스로 호출해도 된다..!!! 그래서 유연하다.
+print(Car.is_bmw(car2))
 
 
 
