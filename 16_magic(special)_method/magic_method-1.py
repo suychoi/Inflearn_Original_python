@@ -12,27 +12,27 @@ magic method = special method
     함수(Functions)
     클래스(Class)
 
-    Special Method : Class 안에 정의할 수 있는 특별한(built in) 메소드
-    Law Level에서 개발을 하는거는 차원이 다른 개발자가 되는것.
+    Special Method : Class 안에 정의할 수 있는 특별한( Built-in ) 메소드
+    Low Level에서 개발을 차원이 다른 개발자가 되는것.
 """
 
 # 기본형
-print(int)
+print(int)  # 모든 파이썬의 데이터 타입은 클래스다.
 print(float)
 
 # 모든 속성 및 메소드 출력
-print(dir(int))
+print(dir(int))     # __ 로 시작하는 메소드들 확인
 print(dir(float))
 
 n = 10
 print(n + 100)          # + 에서 __add__ 가 호출된다
-print(n.__add__(100))
+print(n.__add__(100))       # __add__ 가 + 에 매핑된 것
 # print(n.__doc__)
 
 print(n.__bool__() , bool(n))
 print(n * 100, n.__mul__(100))
 
-print()
+print('-' * 80)
 
 # 새로운 이름을 가진 메서드를 만들면 되는건데 기존에 내장된 메서드를 사용하는 이유가 뭐지?
 # + 같은 기호로 가볍게 계산하기 위해서..?
