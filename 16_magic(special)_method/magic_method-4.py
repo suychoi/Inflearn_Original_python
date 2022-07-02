@@ -6,6 +6,3 @@ Magic(Special) Method :
 사용자 정의 함수 외에, 사용자 정의 클래스에서 내장된 python 함수를 사용하는 것
 '''
 
-class Fruit():
-    def __init__(self, _name, _price):
-        self.

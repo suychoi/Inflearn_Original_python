@@ -8,12 +8,12 @@ Sequence : 일렬로 나열된 순서가있는 자료구조...
 '''
 
 # Tuple Advanced
-# Unpacing
-
+# Unpacking
 # b, a = a, b
 print(divmod(100, 9))   # 몫과 나머지 출력 함수
-print(divmod(*(100, 9))) # 언패킹 풀어줘야 한다.
-print(*(divmod(100,9)))
+print(divmod(*(100, 9))) # 튜플로 넣는 경우 * 를 붙여서 언패킹 풀어줘야 한다.
+# print(divmod((100, 9)))     # 2개의 인자를 받지만, * 가 없는 경우 하나로 인식함.
+print(*(divmod(100,9)))     # 풀려서 나옴.
 
 print()
 
@@ -34,7 +34,7 @@ m = m * 2
 print(l, id(l))         # 곱해서 새로할당했기때문에 id값은 바뀐다.
 print(m, id(m))
 print()
-l *= 2                  # 튜플은 불변형이기 때문에 새로 할당한다.
+l *= 2                  # 튜플은 불변형이기 때문에 새로 할당한다!!!!
 m *= 2                  # 이 때 리스트는 가변형이기 때문에, 자기 id 값을 유지한다.
 print(l, id(l))
 print(m, id(m))

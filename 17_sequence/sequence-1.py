@@ -38,11 +38,15 @@ print([chr(s) for s in code_list2])
 print([chr(s) for s in code_list3])
 print([chr(s) for s in code_list4])
 
-# Generator 생성 sequence result를 반환, 메모리 사용량을 적게 for 문을 돌릴수있다.
+# Generator 생성 sequence result를 반환, 연속되는 값을 사용할 때 메모리 사용량을 줄일 수 있다. ( 다음 위치값을 기억해서)
+# A python Generator is a function that produces a sequence of results. It works by maintaining its local state, so that the
+# funcgion can resume again exactly where it left off when called subsequent times.
 import array
 # array = 플랫, 가변형(위에서 확인)
 print(dir(chars))   # __iter__ 의 존재 확인, 이게 있으면 연속적인 값으로 for문으로 돌릴수있다는 뜻
 
+# tuple_g = [ord(s) for s in chars] # list 로 생성하면 바로 처음부터 끝까지 데이터 값을 메모리에 올린다.
+# 하지만 아래처럼 ( ) 소괄호로 생성하면, 한번에 하나씩 메모리에 올린다.
 tuple_g = (ord(s) for s in chars)
 print(tuple_g)      #<generator object <genexpr> at 0x000001728D730740>
 print(type(tuple_g))
@@ -62,7 +66,7 @@ for s in ('%s' % c + str(n) for c in ['A', 'B', 'C', 'D'] for n in range(1,21)):
     # 하나 생성하고 하나 출력하고 해서 메모리를 아낌
 
 # list 깊은복사와 얕은 복사의 차이!!
-# 리스트 주의 사항
+# 리스트 생성 시 주의 사항 !!!
 marks1 = [['~'] * 3 for _ in range(4)]  # 반복은 하지만 사용은 안하는 경우 _ 로 사용도 가능
 print(marks1)
 
@@ -83,6 +87,7 @@ print(marks2)
 # 증명
 print([id(i) for i in marks1])
 print([id(i) for i in marks2])  # 2번은 다 같은 id를 공유
+
 
 
 

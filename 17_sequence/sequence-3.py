@@ -1,5 +1,5 @@
 """
- - 해시 테이블
+ - 해시 테이블(Hashtable)
  - Dict 생성 고급 예제
  - Setdefault 사용법
 """
